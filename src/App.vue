@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useRecordStore } from './stores/recordStore'
 import Table from './components/Table.vue'

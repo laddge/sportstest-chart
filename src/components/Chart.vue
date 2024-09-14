@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useRecordStore } from '../stores/recordStore'
 import { Radar } from 'vue-chartjs'
@@ -23,7 +23,7 @@ const chartData = computed(() => {
     datasets: [
       {
         label: '今回の結果',
-        data: resultScores.value.slice(0, 8).map(n => n ? n : NaN),
+        data: resultScores.value.slice(0, 8).map(n => n ? Number(n) : NaN),
         borderColor: 'black',
         borderWidth: 2,
         pointStyle: 'circle',
@@ -31,7 +31,7 @@ const chartData = computed(() => {
       },
       {
         label: '電通大平均',
-        data: uecAveScores.value.slice(0, 8).map(n => n ? n : NaN),
+        data: uecAveScores.value.slice(0, 8).map(n => n ? Number(n) : NaN),
         borderColor: 'gray',
         borderWidth: 2,
         borderDash: [15, 5],
@@ -40,7 +40,7 @@ const chartData = computed(() => {
       },
       {
         label: '全国平均',
-        data: jpnAveScores.value.slice(0, 8).map(n => n ? n : NaN),
+        data: jpnAveScores.value.slice(0, 8).map(n => n ? Number(n) : NaN),
         borderColor: 'darkgray',
         borderWidth: 2,
         borderDash: [5, 5],
@@ -72,7 +72,7 @@ const chartOptions = {
       },
     },
   },
-}
+} as const
 </script>
 
 <template>
