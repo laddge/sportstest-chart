@@ -235,6 +235,7 @@ const computeScores = (gender: Ref<'m'|'f'|null>, records: Ref<Records>) => {
 }
 
 export const useRecordStore = defineStore('record', () => {
+  const age = ref<number>(18)
   const gender = ref<'m'|'f'|null>(null)
   const result = ref<Records>(['', '', '', '', '', '', '', '', ''])
   const resultScores = computed(() => computeScores(gender, result))
@@ -243,5 +244,5 @@ export const useRecordStore = defineStore('record', () => {
   const jpnAve = ref<Records>(['', '', '', '', '', '', '', '', ''])
   const jpnAveScores = computed(() => computeScores(gender, jpnAve))
   
-  return { gender, result, resultScores, uecAve, uecAveScores, jpnAve, jpnAveScores }
-})
+  return { age, gender, result, resultScores, uecAve, uecAveScores, jpnAve, jpnAveScores }
+}, { persist: true })

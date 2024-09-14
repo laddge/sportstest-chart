@@ -5,8 +5,13 @@ import { useRecordStore } from './stores/recordStore'
 import Table from './components/Table.vue'
 import Chart from './components/Chart.vue'
 
-const { gender } = storeToRefs(useRecordStore())
-const age = ref(18)
+const { age, gender } = storeToRefs(useRecordStore())
+const reset = () => {
+  if (window.confirm('リセットしますか？')) {
+    localStorage.clear()
+    location.reload()
+  }
+}
 </script>
 
 <template>
@@ -43,6 +48,7 @@ const age = ref(18)
           </div>
         </div>
         <div class="ml-auto print:hidden">
+          <button @click="reset" class="btn btn-sm btn-error btn-outline mr-2">リセット</button>
           <button onclick="window.print()" class="btn btn-sm btn-primary">印刷</button>
         </div>
       </div>
