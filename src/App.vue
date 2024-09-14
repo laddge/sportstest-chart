@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useRecordStore } from './stores/recordStore'
 import Table from './components/Table.vue'
+import Chart from './components/Chart.vue'
 
 const { gender } = storeToRefs(useRecordStore())
 const age = ref(18)
@@ -42,6 +43,7 @@ const age = ref(18)
       性別を選択してください
     </div>
     <Table />
+    <Chart />
   </div>
 </template>
 

@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "chart.js": "^4.4.4",
     "pinia": "^2.2.2",
-    "vue": "^3.4.37"
+    "vue": "^3.4.37",
+    "vue-chartjs": "^5.3.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
