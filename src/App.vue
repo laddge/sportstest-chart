@@ -38,6 +38,9 @@ const age = ref(18)
           )
         </div>
       </div>
+      <div class="ml-auto print:hidden">
+        <button onclick="window.print()" class="border px-2">印刷</button>
+      </div>
     </div>
     <div  v-if="!gender" class="text-red-900 bg-red-100 font-bold p-2 rounded-sm mt-2">
       性別を選択してください
