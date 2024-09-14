@@ -75,3 +75,11 @@ const {
     </table>
   </div>
 </template>
+
+<style>
+  @media print {
+    th {
+      font-weight: normal;
+    }
+  }
+</style>
