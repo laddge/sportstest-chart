@@ -39,7 +39,7 @@ const {
           <th rowspan="2" class="text-nowrap p-2">今回の結果</th>
           <th class="text-nowrap p-1">記録</th>
           <td v-for="n in 9" :key="n" class="px-1 text-center">
-            <input v-model="result[n - 1]" class="input input-bordered input-xs input-primary w-full text-center border print:hidden" :disabled="!gender" />
+            <input v-model="result[n - 1]" class="input input-bordered input-sm h-6 input-primary w-full text-center border print:hidden" :disabled="!gender" />
             <span class="hidden print:inline">{{ result[n - 1] }}</span>
           </td>
         </tr>
@@ -51,7 +51,7 @@ const {
           <th rowspan="2" class="text-nowrap p-2">電通大平均</th>
           <th class="text-nowrap p-1">記録</th>
           <td v-for="n in 9" :key="n" class="px-1 text-center">
-            <input v-model="uecAve[n - 1]" class="input input-bordered input-xs input-primary w-full text-center border print:hidden" :disabled="!gender" />
+            <input v-model="uecAve[n - 1]" class="input input-bordered input-sm h-6 input-primary w-full text-center border print:hidden" :disabled="!gender" />
             <span class="hidden print:inline">{{ uecAve[n - 1] }}</span>
           </td>
         </tr>
@@ -63,7 +63,7 @@ const {
           <th rowspan="2" class="text-nowrap p-2">全国平均</th>
           <th class="text-nowrap p-1">記録</th>
           <td v-for="n in 9" :key="n" class="px-1 text-center">
-            <input v-model="jpnAve[n - 1]" class="input input-bordered input-xs input-primary w-full text-center border print:hidden" :disabled="!gender" />
+            <input v-model="jpnAve[n - 1]" class="input input-bordered input-sm h-6 input-primary w-full text-center border print:hidden" :disabled="!gender" />
             <span class="hidden print:inline">{{ jpnAve[n - 1] }}</span>
           </td>
         </tr>
