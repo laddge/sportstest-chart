@@ -52,6 +52,9 @@ const age = ref(18)
       <Table />
       <Chart />
     </div>
+    <div class="text-center text-sm bg-neutral text-neutral-content p-2 print:hidden">
+      &copy; 2024 <a href="https://laddge.net" target="_blank" class="link">Laddge</a>
+    </div>
   </div>
 </template>
 
