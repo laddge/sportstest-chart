@@ -68,4 +68,9 @@ const reset = () => {
     margin: 0;
     size: A4 portrait;
   }
+  @media print {
+    * {
+      color: black;
+    }
+  }
 </style>
