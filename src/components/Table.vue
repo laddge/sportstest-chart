@@ -23,15 +23,15 @@ const {
         <tr class="border-y border-black">
           <th></th>
           <th></th>
-          <th class="p-1">握力<br />(kg)</th>
-          <th class="p-1">上体起こし<br />(回)</th>
-          <th class="p-1">長座体前屈<br />(cm)</th>
-          <th class="p-1">反復横とび<br />(点)</th>
-          <th class="p-1">持久走<br />(分:秒)</th>
-          <th class="p-1">50m走<br />(秒)</th>
-          <th class="p-1">立ち幅とび<br />(cm)</th>
-          <th class="p-1">ﾊﾝﾄﾞﾎﾞｰﾙ投げ<br />(m)</th>
-          <th class="p-1">総合点<br />(点)</th>
+          <th class="p-1 min-w-16">握力<br />(kg)</th>
+          <th class="p-1 min-w-16">上体起こし<br />(回)</th>
+          <th class="p-1 min-w-16">長座体前屈<br />(cm)</th>
+          <th class="p-1 min-w-16">反復横とび<br />(点)</th>
+          <th class="p-1 min-w-16">持久走<br />(分:秒)</th>
+          <th class="p-1 min-w-16">50m走<br />(秒)</th>
+          <th class="p-1 min-w-16">立ち幅とび<br />(cm)</th>
+          <th class="p-1 min-w-16">ﾊﾝﾄﾞﾎﾞｰﾙ投げ<br />(m)</th>
+          <th class="p-1 min-w-16">総合点<br />(点)</th>
         </tr>
       </thead>
       <tbody>
@@ -39,7 +39,7 @@ const {
           <th rowspan="2" class="text-nowrap p-2">今回の結果</th>
           <th class="text-nowrap p-1">記録</th>
           <td v-for="n in 9" :key="n" class="px-1 text-center">
-            <input v-model="result[n - 1]" class="w-full min-w-10 text-center border print:hidden" :disabled="!gender" />
+            <input v-model="result[n - 1]" class="input input-bordered input-xs input-primary w-full text-center border print:hidden" :disabled="!gender" />
             <span class="hidden print:inline">{{ result[n - 1] }}</span>
           </td>
         </tr>
@@ -51,7 +51,7 @@ const {
           <th rowspan="2" class="text-nowrap p-2">電通大平均</th>
           <th class="text-nowrap p-1">記録</th>
           <td v-for="n in 9" :key="n" class="px-1 text-center">
-            <input v-model="uecAve[n - 1]" class="w-full text-center border print:hidden" :disabled="!gender" />
+            <input v-model="uecAve[n - 1]" class="input input-bordered input-xs input-primary w-full text-center border print:hidden" :disabled="!gender" />
             <span class="hidden print:inline">{{ uecAve[n - 1] }}</span>
           </td>
         </tr>
@@ -63,7 +63,7 @@ const {
           <th rowspan="2" class="text-nowrap p-2">全国平均</th>
           <th class="text-nowrap p-1">記録</th>
           <td v-for="n in 9" :key="n" class="px-1 text-center">
-            <input v-model="jpnAve[n - 1]" class="w-full text-center border print:hidden" :disabled="!gender" />
+            <input v-model="jpnAve[n - 1]" class="input input-bordered input-xs input-primary w-full text-center border print:hidden" :disabled="!gender" />
             <span class="hidden print:inline">{{ jpnAve[n - 1] }}</span>
           </td>
         </tr>
